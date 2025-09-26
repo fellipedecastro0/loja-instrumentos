@@ -9,13 +9,12 @@ public class Main {
         f1.cadastrarProduto(baqueta);
         Venda venda1 = f1.gerarVenda(1);
 
-        venda1.adicionarProduto(guitarra, 1); // 1 guitarra
-        venda1.adicionarProduto(baqueta, 2);  // 2 baquetas
+        venda1.adicionarProduto(guitarra, 1); 
+        venda1.adicionarProduto(baqueta, 2);  
 
 
         System.out.println("\n--- Itens da Venda #" + venda1.getId() + " ---");
-        venda1.exibirItens(); // Chama o método para mostrar os produtos da venda.
-
+        venda1.exibirItens(); 
 
         System.out.println("--------------------------");
         System.out.println("Valor total da venda: R$ " + String.format("%.2f", venda1.getValorTotal()));
