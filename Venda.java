@@ -31,4 +31,9 @@ public class Venda {
     public double getValorTotal() {
         return this.valorTotal;
     }
+
+    public int getId() {
+    return this.id;
+    }
+
 }
