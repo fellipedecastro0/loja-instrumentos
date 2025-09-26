@@ -1,7 +1,7 @@
 public class Acessorio extends Produto{
     private String material;
 
-    public Acessorio(int codigo, String nome, Double preco, Categoria categoria, String material) {
+    public Acessorio(int codigo, String nome, double preco, Categoria categoria, String material) {
         super(codigo, nome, preco, categoria);
 
         this.material = material;
