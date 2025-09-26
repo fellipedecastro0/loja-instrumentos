@@ -1,0 +1,52 @@
+public abstract class Produto {
+    private int codigo;
+    private String nome;
+    private double preco;
+    private Categoria categoria;
+
+    public Produto(int codigo, String nome, double preco, Categoria categoria) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.setPreco(preco); // já usa a validação
+        this.categoria = categoria;
+    }
+
+    public int getCodigo() {
+        return this.codigo;
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return this.preco;
+    }
+
+    public void setPreco(double preco) {
+        if (preco >= 0) {
+            this.preco = preco;
+        } else {
+            System.out.println("Erro: O preço não pode ser negativo. Valor ignorado.");
+        }
+    }
+
+    public Categoria getCategoria() {
+        return this.categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public void exibirDetalhes() {
+        System.out.println("Código: " + this.codigo);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Preço: R$ " + String.format("%.2f", this.preco));
+        System.out.println("Categoria: " + this.categoria);
+    }
+}
