@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public abstract class Produto {
     private int codigo;
     private String nome;

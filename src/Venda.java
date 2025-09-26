@@ -32,4 +32,18 @@ public class Venda {
     public double getValorTotal() {
         return this.valorTotal;
     }
+
+    public int getId() {
+        return this.id;
+    }
+
+
+    public void exibirItens() {
+        System.out.println("--------------------------");
+        for (ItemVenda item : this.itens) {
+            item.getProduto().exibirDetalhes();
+            System.out.println("Quantidade: " + item.getQuantidade() + " | Subtotal: R$ " + String.format("%.2f", item.getSubtotal()));
+            System.out.println("--------------------------");
+        }
+    }
 }
