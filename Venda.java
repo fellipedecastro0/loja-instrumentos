@@ -36,4 +36,13 @@ public class Venda {
     return this.id;
     }
 
+    public void exibirItens() {
+    for (ItemVenda item : itens) {
+        item.getProduto().exibirDetalhes();
+        System.out.println("Quantidade: " + item.getQuantidade() +
+                           " | Subtotal: R$ " + item.getSubtotal());
+    }
+}
+
+
 }
